@@ -1,5 +1,9 @@
 # OINO.uno 
 
+### Installation
+```bash
+composer global require 3xter/oino
+```
 Install in your laravel project [laracasts/generators](https://github.com/laracasts/Laravel-5-Generators-Extended)
 ```bash
 composer require --dev laracasts/generators
@@ -29,10 +33,10 @@ db - schema parser use dbal. More details about settings: [Doctrine DBAL Configu
 
 ### Import example:
 ```bash
-php oino -c import -o /path/to/settings/oino.yaml --file="path/to/exported/file.json" --tab="tab name" --project="/path/to/project"
+php ~/.composer/vendor/bin/oino -c import -o /path/to/settings/oino.yaml --file="path/to/exported/file.json" --tab="tab name" --project="/path/to/project"
 ```
 
 ### Export example:
 ```bash
-php oino -c export -o /path/to/settings/oino.yaml --dir="path/to/export/directory"
+php ~/.composer/vendor/bin/oino -c export -o /path/to/settings/oino.yaml --dir="path/to/export/directory"
 ```
