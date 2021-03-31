@@ -1,0 +1,32 @@
+{
+    "name": "3xter/oino",
+    "description": "Export from database designer http://oino.uno and import to your database",
+    "homepage": "http://oino.uno/",
+    "type": "library",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "oino",
+        "dbdesigner",
+        "laravel",
+        "database"
+    ],
+    "authors": [
+        {
+            "name": "3xter",
+            "email": "pasha.v13@gmail.com"
+        }
+    ],
+    "require": {
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "doctrine/dbal": "^3.0",
+        "ramsey/uuid": "^4.1",
+        "symfony/yaml": "^5.2"
+    },
+    "autoload": {
+        "psr-4": {"Oino\\": "src/"}
+    },
+    "bin": [
+        "oino"
+    ]
+}

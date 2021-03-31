@@ -1,0 +1,28 @@
+#!/usr/bin/env php
+<?php
+declare(strict_types=1);
+
+if (!ini_get('date.timezone')) {
+    ini_set('date.timezone', 'UTC');
+}
+
+foreach (array(__DIR__ . '/../../autoload.php', __DIR__ . '/../vendor/autoload.php', __DIR__ . '/vendor/autoload.php') as $file) {
+    if (file_exists($file)) {
+        define('OINO_COMPOSER_INSTALL', $file);
+
+        break;
+    }
+}
+
+unset($file);
+
+if (!defined('OINO_COMPOSER_INSTALL')) {
+    echo "Composer not found\n";
+
+    die(1);
+}
+
+require OINO_COMPOSER_INSTALL;
+
+$args = \Oino\Args::create();
+exit(\Oino\OinoLoader::load($args));
